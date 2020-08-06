@@ -1,7 +1,11 @@
 ## Permutation String
 
-Given two strings, write a method to decide if one is a permutation of the other.
+>Given two strings, write a method to decide if one is a permutation of the other.
+
+```
 eg. "cat" , "act"
+```
+
 They both have the same letters
 Same character count
 Repeating elements don't really matter when comes to permutation value
@@ -12,9 +16,6 @@ In an interview, when talking about the complexity of a HashMap or HashSet, ment
 
 ```swift
 import Foundation
-
-
-
 
 // Precondition: All strings are lowercase
 // Complexity: O(n^2)

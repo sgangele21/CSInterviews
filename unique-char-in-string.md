@@ -2,9 +2,10 @@
 
 > Determine if all the characters of a string are unique!
 
+```
 Example:  isUnique("Sahil")   --> True
           isUnique("Gangele") --> False
-
+```
 
 ```java
 

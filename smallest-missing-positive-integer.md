@@ -2,32 +2,42 @@
 
 > Given an unsorted integer array, find the smallest missing positive integer.  
 
+```
 Example 1:
 
 Input: [1,2,0]
 Output: 3
+```
 
+```
 Example 2:
 
 Input: [3,4,-1,1]
 Output: 2
+```
 
+```
 Example 3:
 
 Input: [7,8,9,11,12]
 Output: 1
-Note:
+```
 
-Your algorithm should run in O(n) time and uses constant extra space.
-
+```
 Example 4
 Input: [10,11,12,13]
 Output: 1
+```
 
-
+```
 Example 5
 Input: [1,3,5,7,8]
 Output: 2
+```
+
+**Note:**
+
+Your algorithm should run in O(n) time and uses constant extra space.
 
 ```java
 import java.io.*;
@@ -43,10 +53,6 @@ class Solution {
 
     int num = s.missingSmallestInteger(nums);
     System.out.println(num);
-
-
-
-
   }
 
   // Hashing Solution
