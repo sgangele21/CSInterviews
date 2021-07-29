@@ -101,3 +101,63 @@ public class Solution {
   }
 }
 ```
+Slow - fast pointer implementation
+
+```java
+public class loop_detection {
+    Node head;
+
+    private class Node {
+        Node next;
+        int data;
+
+        public Node(int data) {
+            this.data = data;
+            this.next = null;
+        }
+    }
+
+    public static void main(String[] args) {
+        loop_detection ll = new loop_detection();
+        ll.append(20);
+        ll.append(4);
+        ll.append(15);
+        ll.append(10);
+
+        ll.head.next.next.next.next = ll.head;
+        ll.loop();
+
+
+    }
+
+    /**
+     * solution1: fast and slow pointer/  Floyd's cycle finding algorithm
+     * traverse a linked list using two pointers.
+     * move one pointer by one and another pointer by two
+     * if these pointers meet at the same node then there is a loop.
+     * if these pointers do not meet then the linked list doesn't have a loop
+     * Only one traversal is needed. The time complexity is O(n)
+     */
+    public void loop() {
+        int flag = 0;
+        Node slowPointer = head;
+        Node fastPointer = head;
+
+        while (slowPointer != null && fastPointer != null && fastPointer.next != null) {
+            fastPointer = fastPointer.next.next;
+            slowPointer = slowPointer.next;
+
+            if (fastPointer == slowPointer) {
+                flag = 1;
+                break;
+            }
+
+        }
+        if (flag == 1) {
+            System.out.println("loop found");
+        } else {
+            System.out.println("loop not found");
+        }
+    }
+
+```
